@@ -22,10 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pageControl = [[KYAnimatedPageControl alloc]initWithFrame:CGRectMake(20, 500, 280, 50)];
-    self.pageControl.pageCount = 8;
-    self.pageControl.unSelectedColor = [UIColor colorWithWhite:0.9 alpha:1];
-    self.pageControl.selectedColor = [UIColor redColor];
+    self.pageControl = [[KYAnimatedPageControl alloc]initWithFrame:CGRectMake(20, 500, 280, 20)];
+    self.pageControl.pageCount = 6;
+    self.pageControl.unSelectedColor = [UIColor colorWithRed:0.596 green:0.596 blue:0.604 alpha:1.000];
+    self.pageControl.selectedColor = [UIColor colorWithRed:0.725 green:0.808 blue:0.000 alpha:1.000];
     self.pageControl.bindScrollView = self.demoCollectionView;
 
 //    ((UIScrollView *)self.demoCollectionView).delegate = self.pageControl.bindScrollViewDelegate;
@@ -33,7 +33,7 @@
     self.pageControl.shouldShowProgressLine = YES;
     
     self.pageControl.indicatorStyle = IndicatorStyleGooeyCircle;
-    self.pageControl.indicatorSize = 20;
+    self.pageControl.indicatorSize = 14;
     self.pageControl.swipeEnable = YES;
     [self.view addSubview:self.pageControl];
     
